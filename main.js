@@ -8,13 +8,13 @@ var theCurrentWrd;
 prompt.start();
 
 function Game(){
-  this.wordBank = ['hello','what','alejandra'];
+  this.wordBank = ['puzzling','wooziness','remarkable','january','pennsylvania','mysterious'];
   this.guessesRemaining = 10;
   this.currentWrd = null;
   this.startGame = function(wrd){
 
     theCurrentWrd = this.currentWrd;
-    var wordChosen = Math.floor((Math.random() * 3) + 1);
+    var wordChosen = Math.floor((Math.random() * 6) + 1);
     theCurrentWrd = new Word(this.wordBank[wordChosen-1]);
     console.log(theCurrentWrd);
     theCurrentWrd.getLets();
@@ -53,4 +53,4 @@ function Game(){
 }
 
 var game = new Game();
-game.startGame("What");
+game.startGame();
