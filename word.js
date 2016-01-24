@@ -2,7 +2,6 @@
  * Created by Ale on 1/21/16.
  */
 var Letter = require('./letter.js');
-var myLetterObj;
 
 function Word(wrd){
   this.word = wrd;
@@ -11,7 +10,7 @@ function Word(wrd){
   this.getLets = function(){
     for(var i = 0; i < this.word.length; i++){
       this.lets[i] = new Letter(this.word[i]);
-      console.log(myLetterObj);
+      //console.log(this.lets[i]);
     }
   }
   this.checkIfLetterFound = function(guessLetter){
@@ -25,12 +24,14 @@ function Word(wrd){
     return whatToReturn;
   }
   this.didWeFindTheWord = function(){
-    this.lets.every(function(curLet){
+    var result = this.lets.every(function(curLet){
       if(curLet.appear === true){
         curLet.found = true;
         return curLet.found;
       }
     });
+
+    return result;
   }
   this.wordRender = function(){
     var str = "";
