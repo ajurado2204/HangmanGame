@@ -5,10 +5,10 @@ function Letter(let){
   this.charac = let;
   this.appear = false;
   this.letterRender = function(){
-    if(charac === false)
-      console.log("_");
+    if(this.appear === false)
+      return "_";
     else
-      console.log(charac);
+      return this.charac;
   }
 }
 
