@@ -11,12 +11,11 @@ function Game(){
   this.wordBank = ['puzzling','wooziness','remarkable','january','pennsylvania','mysterious'];
   this.guessesRemaining = 10;
   this.currentWrd = null;
-  this.startGame = function(wrd){
+  this.startGame = function(){
 
     theCurrentWrd = this.currentWrd;
     var wordChosen = Math.floor((Math.random() * 6) + 1);
     theCurrentWrd = new Word(this.wordBank[wordChosen-1]);
-    console.log(theCurrentWrd);
     theCurrentWrd.getLets();
     this.keepPromptingUser();
   }
