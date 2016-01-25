@@ -28,7 +28,7 @@ function Game(){
       var findHowManyOfUserGuess = theCurrentWrd.checkIfLetterFound(result.guessLetter);
 
       if(findHowManyOfUserGuess === 0){
-        console.log("You guessed wrong~!");
+        console.log("Your guessed wrong~!");
         self.guessesRemaining--;
       }else{
         console.log("You guessed right!");
@@ -43,7 +43,7 @@ function Game(){
       if(self.guessesRemaining > 0 && theCurrentWrd.found === false){
         self.keepPromptingUser();
       }else if(self.guessesRemaining === 0){
-        console.log("Game over bro");
+        console.log("Game over bro, the word was: " + theCurrentWrd.word);
       }else{
         console.log(theCurrentWrd.wordRender());
       }
