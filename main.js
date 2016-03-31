@@ -44,8 +44,6 @@ function Game(){
         self.keepPromptingUser();
       }else if(self.guessesRemaining === 0){
         console.log("Game over bro, the word was: " + theCurrentWrd.word);
-      }else{
-        console.log(theCurrentWrd.wordRender());
       }
     });
   }
